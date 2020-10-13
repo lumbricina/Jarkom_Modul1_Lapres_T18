@@ -31,17 +31,22 @@ clue: "25 50 44 46"
 ### Jawaban
 1. Webserver yang digunakan pada "testing.mekanis.me" adalah nginx/1.14.0 (Ubuntu). Didapat menggunakan filter http.host=="testing.mekanis.me". Kemudian dicek menggunakan TCP Stream.
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/1.png)
+
 2. Mengeksport http kemudian filter dengan nama file yang sudah diberi tahu di soal.
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/2.png)
 Tampilan “Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg”:
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg)
+
 3. Untuk mencari semua yang menggunakan username dan password menggunakan filter "http.request.method == POST". Setelah itu cek detail nya menggunakan TCP Stream. 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/3.png)
+
 4. 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/4.png)
+
 5.
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/5a.png)
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/5b.png)
+
 6.
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6a.png)
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6b.png)
@@ -49,17 +54,22 @@ Tampilan “Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg”:
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6d.png)
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6e.png)
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6f.png)
+
 7.
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/7.png)
+
 8.
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8a.png)
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8b.png)
+
 9.
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/9.png)
+
 10.
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/10a.png)
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/10b.png)
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/10c.png)
+
 11.
 
 12.
