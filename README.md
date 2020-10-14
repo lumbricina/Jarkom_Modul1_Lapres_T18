@@ -55,8 +55,10 @@ Tampilan “Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg”:
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6e.png)
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6f.png)
 
-7.
-![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/7.png)
+7. Ubah Yes.pdf menjadi hex menggunakan calculator -> 59 65 73 2e 70 64 66.
+![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/7a.png)
+Cari menggunakan hex value
+![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/7b.png)
 
 8.
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8a.png)
