@@ -29,7 +29,7 @@ clue: "25 50 44 46"
 
 -------------------------
 ### Jawaban
-1. Webserver yang digunakan pada "testing.mekanis.me" adalah nginx/1.14.0 (Ubuntu). Didapat menggunakan filter http.host=="testing.mekanis.me". Kemudian dicek menggunakan TCP Stream.
+1. Webserver yang digunakan pada "testing.mekanis.me" adalah nginx/1.14.0 (Ubuntu). Didapat menggunakan filter '''http.host=="testing.mekanis.me"'''. Kemudian dicek menggunakan TCP Stream.
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/1.png)
 
 2. Mengeksport http kemudian filter dengan nama file yang sudah diberi tahu di soal.
