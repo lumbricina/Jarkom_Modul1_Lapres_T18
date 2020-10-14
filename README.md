@@ -33,67 +33,103 @@ clue: "25 50 44 46"
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/1.png)
 
 2. Mengeksport http kemudian filter dengan nama file yang sudah diberi tahu di soal.
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/2.png)
+
 Tampilan “Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg”:
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg)
 
 3. Untuk mencari semua yang menggunakan username dan password menggunakan filter `http.request.method == POST`. Setelah itu cek detail nya menggunakan TCP Stream. 
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/3.png)
 
 4. Menggunakan `http.authbasic` untuk memfilter semua yang menggunakan basic authentication method
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/4.png)
 
 5. Untuk mendapatkan Nama pengguna dan sandi, pertama menggunakan filter `http.host=="aku.pengen.pw"`. Kemudian pilih salah satu, lihat pada bagian authorization dan credentials
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/5a.png)
 Nama pengguna : kakakgamtenk
 Sandi         : hartatahtabermuda
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/5b.png)
 
 6. Menggunakan `follow tcp stream`
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6a.png)
+
 Lihat pada stream 12 -> show and save data as RAW -> save as ZIP file
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6b.png)
+
 File zip akan terlihat sebagai berikut :
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6c.png)
+
 Untuk membuka file `Open This.pdf` dibutuhkan password. Untuk mencari password tersebut, dicari yang ada zipkey.txt kemudian follow tcp stream
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6d.png)
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6e.png)
+
 Muncul password, gunakan, dan tampilan isi pdf adalah sebagai berikut
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6f.png)
 
 7. Menggunakan `ftp-data contains "Yes.pdf"`
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/7a.png)
+
 Follow tcp stream dan save file as raw dalam bentuk zip
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/7b.png)
+
 Tampilan Yes.pdf adalah sebagai berikut
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/7c.png)
 
 8. Ada 2 cara menyelesaikan soal ini
 ###### Cara 1:
 Scroll down kebawah cari yang ada `RETR`terlihat ip addressnya
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8d.png)
+
 Menggunakan `ftp.request && ip.addr == 198.246.117.106`
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8a.png)
+
 Dilihat pada file transfer protocol bahwa `Readme` menggunakan `RETR`. 
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8b.png)
+
 Kemudian follow tcp stream dan dapat terlihat bahwa menggunakan Microsoft FTP Service
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8c.png)
 
 ###### Cara 2:
 Menggunakan `ftp.request.command == RETR`
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8e.png)
+
 Kemudian follow tcp stream seperti pada cara 1
 
 9. Menggunakan `ftp`
 USER dhana
 PASS dhana123
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/9.png)
 
 10. Mencari menggunakan hex value dari hint yang diberikan
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/10a.png)
+
 Didapatkan link dari dokumen 1759.pdf
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/10b.png)
+
 Klik link yang ada di bawahnya dan muncul file pdf yang dimaksud.
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/10c.png)
 
 11. port 21
@@ -103,6 +139,7 @@ Klik link yang ada di bawahnya dan muncul file pdf yang dimaksud.
 13. dst port 443
 
 14. ip.src == 192.168.0.15 -> IP dari komputer
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/14.png)
 
 15. Pertama melakukan ping ke http://monta.if.its.ac.id/ untuk mendapatkan ip addressnya. Didapatkan IP 103.94.190.11, gunakan `capture filter` ini untuk mengambil paket yang tujuannya ke monta.if.its.ac.id
