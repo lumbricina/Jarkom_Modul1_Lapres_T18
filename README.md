@@ -1,7 +1,4 @@
 # Jarkom Modul1 Praktikum T18
-Konten
-- [Soal](sub-Soal)
-- [Jawaban](sub-Jawaban)
 
 ### Soal
 Terdapat tiga buah file *.pcapng yang mendukung soal-soal display filter, yaitu:
