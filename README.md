@@ -29,10 +29,11 @@ clue: "25 50 44 46"
 
 -------------------------
 ### Jawaban
-1. Webserver yang digunakan pada "testing.mekanis.me" adalah nginx/1.14.0 (Ubuntu). Didapat menggunakan filter `'http.host=="testing.mekanis.me"`. Kemudian dicek menggunakan TCP Stream.
+
+###### 1. Webserver yang digunakan pada "testing.mekanis.me" adalah nginx/1.14.0 (Ubuntu). Didapat menggunakan filter `'http.host=="testing.mekanis.me"`. Kemudian dicek menggunakan TCP Stream.
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/1.png)
 
-2. Mengeksport http kemudian filter dengan nama file yang sudah diberi tahu di soal.
+###### 2. Mengeksport http kemudian filter dengan nama file yang sudah diberi tahu di soal.
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/2.png)
 
@@ -40,22 +41,24 @@ Tampilan “Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg”:
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg)
 
-3. Untuk mencari semua yang menggunakan username dan password menggunakan filter `http.request.method == POST`. Setelah itu cek detail nya menggunakan TCP Stream. 
+###### 3. Untuk mencari semua yang menggunakan username dan password menggunakan filter `http.request.method == POST`. Setelah itu cek detail nya menggunakan TCP Stream. 
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/3.png)
 
-4. Menggunakan `http.authbasic` untuk memfilter semua yang menggunakan basic authentication method
+###### 4. Menggunakan `http.authbasic` untuk memfilter semua yang menggunakan basic authentication method
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/4.png)
 
-5. Untuk mendapatkan Nama pengguna dan sandi, pertama menggunakan filter `http.host=="aku.pengen.pw"`. Kemudian pilih salah satu, lihat pada bagian authorization dan credentials
+###### 5. Untuk mendapatkan Nama pengguna dan sandi, pertama menggunakan filter `http.host=="aku.pengen.pw"`. Kemudian pilih salah satu, lihat pada bagian authorization dan credentials
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/5a.png)
+
 Nama pengguna : kakakgamtenk
 Sandi         : hartatahtabermuda
+
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/5b.png)
 
-6. Menggunakan `follow tcp stream`
+###### 6. Menggunakan `follow tcp stream`
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6a.png)
 
@@ -77,7 +80,7 @@ Muncul password, gunakan, dan tampilan isi pdf adalah sebagai berikut
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/6f.png)
 
-7. Menggunakan `ftp-data contains "Yes.pdf"`
+###### 7. Menggunakan `ftp-data contains "Yes.pdf"`
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/7a.png)
 
@@ -89,59 +92,45 @@ Tampilan Yes.pdf adalah sebagai berikut
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/7c.png)
 
-8. Ada 2 cara menyelesaikan soal ini
-###### Cara 1:
-Scroll down kebawah cari yang ada `RETR`terlihat ip addressnya
+###### 8. Menggunakan `ftp.request.command == RETR`
 
-![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8d.png)
-
-Menggunakan `ftp.request && ip.addr == 198.246.117.106`
-
-![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8a.png)
-
-Dilihat pada file transfer protocol bahwa `Readme` menggunakan `RETR`. 
-
-![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8b.png)
+![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8e.png)
 
 Kemudian follow tcp stream dan dapat terlihat bahwa menggunakan Microsoft FTP Service
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8c.png)
 
-###### Cara 2:
-Menggunakan `ftp.request.command == RETR`
-
-![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/8e.png)
-
-Kemudian follow tcp stream seperti pada cara 1
-
-9. Menggunakan `ftp`
+###### 9. Menggunakan `ftp contains "USER"` dan `ftp contains "PASS"
 USER dhana
 PASS dhana123
 
-![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/9.png)
+![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/9a.png)
 
-10. Mencari menggunakan hex value dari hint yang diberikan
+
+![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/9b.png)
+
+###### 10. Mencari menggunakan hex value dari hint yang diberikan
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/10a.png)
 
-Didapatkan link dari dokumen 1759.pdf
+Follow tcp stream dan didapat link dari file yang dimaksud
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/10b.png)
 
-Klik link yang ada di bawahnya dan muncul file pdf yang dimaksud.
+Buka link tersebut dan terlihat seperti gambar berikut
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/10c.png)
 
-11. port 21
+###### 11. port 21
 
-12. src port 80
+###### 12. src port 80
 
-13. dst port 443
+###### 13. dst port 443
 
-14. ip.src == 192.168.0.15 -> IP dari komputer
+###### 14. ip.src == 192.168.0.15 -> IP dari komputer
 
 ![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/14.png)
 
-15. Pertama melakukan ping ke http://monta.if.its.ac.id/ untuk mendapatkan ip addressnya. Didapatkan IP 103.94.190.11, gunakan `capture filter` ini untuk mengambil paket yang tujuannya ke monta.if.its.ac.id
+###### 15. Pertama melakukan ping ke http://monta.if.its.ac.id/ untuk mendapatkan ip addressnya. Didapatkan IP 103.94.190.11, gunakan `capture filter` ini untuk mengambil paket yang tujuannya ke monta.if.its.ac.id
 `host 103.94.190.11`
 
