@@ -127,10 +127,8 @@ Buka link tersebut dan terlihat seperti gambar berikut
 
 ###### 13. dst port 443
 
-###### 14. ip.src == 192.168.0.15 -> IP dari komputer
-
-![](https://github.com/lumbricina/Jarkom_Modul1_Praktikum_T18/blob/main/img/14.png)
+###### 14. `src host 192.168.0.15` -> IP dari komputer
 
 ###### 15. Pertama melakukan ping ke http://monta.if.its.ac.id/ untuk mendapatkan ip addressnya. Didapatkan IP 103.94.190.11, gunakan `capture filter` ini untuk mengambil paket yang tujuannya ke monta.if.its.ac.id
-`host 103.94.190.11`
+`dst host 103.94.190.11`
 
