@@ -1,4 +1,4 @@
-# Jarkom Modul1 Praktikum T18
+# LapresJarkom Modul1 Praktikum T18
 
 ### Soal
 Terdapat tiga buah file *.pcapng yang mendukung soal-soal display filter, yaitu:
@@ -131,4 +131,7 @@ Buka link tersebut dan terlihat seperti gambar berikut
 
 ###### 15. Pertama melakukan ping ke http://monta.if.its.ac.id/ untuk mendapatkan ip addressnya. Didapatkan IP 103.94.190.11, gunakan `capture filter` ini untuk mengambil paket yang tujuannya ke monta.if.its.ac.id
 `dst host 103.94.190.11`
+
+## Kendala
+tidak ada kendala yang signifikan atau kompleks selama mengerjakan, hanya kendala penyesuaian waktu pengerjaan, serta pada display capture yang sedikit ada kesalahan
 
